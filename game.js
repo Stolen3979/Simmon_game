@@ -68,7 +68,7 @@ if(gamePattern.length>0){
 }
 $(".btn").on("click",function() {
     userClickedPattern.push(this.id);
-    $("#"+this.id).toggleClass(".pressed",2000);
+    $("#"+this.id).toggleClass("pressed",2000);
 } );
 // $('.btn').on('click', function() {
 //      $("#"+this.id).toggleClass("pressed");
