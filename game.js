@@ -67,7 +67,7 @@ if(gamePattern.length>0){
     }
 }
 
-$(".btn").click(function() {
+$(".btn").on("click", function() {
   $("#"+this.id).toggleClass('pressed', 2000).toggleClass('pressed', 2000);
 });
 
