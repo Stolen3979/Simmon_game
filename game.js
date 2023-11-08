@@ -66,10 +66,15 @@ if(gamePattern.length>0){
     playSound(gamePattern[i]);
     }
 }
-$(".btn").on("click",function() {
-    userClickedPattern.push(this.id);
-    $("#"+this.id).toggleClass("pressed",2000);
-} );
+
+$(".btn").click(function() {
+  $("#"+this.id).toggleClass('pressed', 2000).toggleClass('pressed', 2000);
+});
+
+// $(".btn").on("click",function() {
+//     userClickedPattern.push(this.id);
+//     $("#"+this.id).toggleClass("pressed",2000);
+// } );
 // $('.btn').on('click', function() {
 //      $("#"+this.id).toggleClass("pressed");
 //     });
