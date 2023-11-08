@@ -70,10 +70,14 @@ $(".btn").on("click",function() {
     userClickedPattern.push(this.id);
     $("#"+this.id+"").toggleClass(".pressed");
 } );
-
-function animatePress(currentColour){
-   
+$('.btn').on('click', function() {
+     $("#"+this.id).toggleClass("pressed");
+    });
+// function animatePress(currentColour){
+//    $('.btn').on('click', function() {
+//      $("#"+this.id).toggleClass("pressed");
+//     });
     
-}
+// }
 
 
