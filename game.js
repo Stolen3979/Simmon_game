@@ -2,25 +2,10 @@ var buttonColours = ["red", "blue", "green", "yellow"];
 var gamePattern = [];
 var userClickedPattern = [];
 var level = 0;
-// var start = false;
-// $("#start").on("click", function() {
-//    start = true;
-// } );
-// $("#end").on("click", function() {
-//     start = false;
-//  } );
 
-// while(start === true){
 
-//     
-// for (var j=0;j<= gamePattern.length;j++){
-//     if (gamePattern[j]!=userClickedPattern[j]){
-//         start= false;
-//     } else{
-//         start = true;
-//     }
-// }
-// }
+
+
 $(document).keypress(function nextSquence()
 {
 
@@ -34,8 +19,6 @@ $(document).keypress(function nextSquence()
 });
 
 
-// nextSquence();
-// gamePattern.push(nextSquence());
 
 
 
@@ -54,19 +37,7 @@ $(".btn").on("click", function() {
     userClickedPattern.push(this.id);
 });
 
-// $(".btn").on("click",function() {
-//     userClickedPattern.push(this.id);
-//     $("#"+this.id).toggleClass("pressed",2000);
-// } );
-// $('.btn').on('click', function() {
-//      $("#"+this.id).toggleClass("pressed");
-//     });
-// function animatePress(currentColour){
-//    $('.btn').on('click', function() {
-//      $("#"+this.id).toggleClass("pressed");
-//     });
-    
-// }
+
 
 
 function playSound(name){
