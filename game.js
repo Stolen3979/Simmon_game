@@ -1,6 +1,7 @@
 var buttonColours = ["red", "blue", "green", "yellow"];
 var gamePattern = [];
 var userClickedPattern = [];
+var level = 0;
 // var start = false;
 // $("#start").on("click", function() {
 //    start = true;
@@ -20,15 +21,15 @@ var userClickedPattern = [];
 //     }
 // }
 // }
- function nextSquence()
+$(document).keypress(function nextSquence()
 {
 
     var randomNumber = Math.floor(Math.random()*3 +1);
     var randomChosenColour = buttonColours[randomNumber];
     $("#"+randomChosenColour).fadeOut(100).fadeIn(100);
-   
-    return gamePattern.push(randomChosenColour);
-}
+    gamePattern.push(randomChosenColour);
+    playSound(randomChosenColour);
+});
 
 
 // nextSquence();
