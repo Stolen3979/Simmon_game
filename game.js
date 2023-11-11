@@ -26,9 +26,11 @@ $(document).keypress(function nextSquence()
 
     var randomNumber = Math.floor(Math.random()*3 +1);
     var randomChosenColour = buttonColours[randomNumber];
-    $("#"+randomChosenColour).fadeOut(100).fadeIn(100);
+    $("#"+randomChosenColour).toggleClass('pressed', 100).toggleClass('pressed', 100);
     gamePattern.push(randomChosenColour);
     playSound(randomChosenColour);
+    $("h1").text("Level "+ level);
+    level += 1;
 });
 
 
@@ -39,6 +41,9 @@ $(document).keypress(function nextSquence()
 
 if(gamePattern.length>0){
     for (var i = 0;i<= gamePattern.length-1;i++){
+        // if(gamePattern[i] != userClickedPattern[i]){
+            // 
+        // };
     playSound(gamePattern[i]);
     }
 }
@@ -46,6 +51,7 @@ if(gamePattern.length>0){
 $(".btn").on("click", function() {
   $("#"+this.id).toggleClass('pressed', 100).toggleClass('pressed', 100);
     playSound(this.id);
+    userClickedPattern.push(this.id);
 });
 
 // $(".btn").on("click",function() {
