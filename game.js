@@ -35,31 +35,6 @@ var userClickedPattern = [];
 // gamePattern.push(nextSquence());
 
 
-function playSound(name){
-    switch(name){
-        case "green":
-            green= new Audio("../Simon Gmae Challenge Starting Files/sounds/green.mp3");
-            green.play();
-        break;
-        case "red":
-            red = new Audio("../Simon Gmae Challenge Starting Files/sounds/red.mp3");
-            red.play();
-        break;
-        case "yellow":
-            yellow = new Audio("../Simon Gmae Challenge Starting Files/sounds/yellow.mp3");
-            yellow.play();
-        break;
-        case "blue":
-            blue = new Audio("../Simon Gmae Challenge Starting Files/sounds/blue.mp3");
-            blue.play();
-        break;
-        default:
-            wrong = new Audio("../Simon Gmae Challenge Starting Files/sounds/wrong.mp3");
-            wrong.play();
-        break;
-
-    }
-}
 
 if(gamePattern.length>0){
     for (var i = 0;i<= gamePattern.length-1;i++){
@@ -68,7 +43,8 @@ if(gamePattern.length>0){
 }
 
 $(".btn").on("click", function() {
-  $("#"+this.id).toggleClass('pressed', 2000).toggleClass('pressed', 2000);
+  $("#"+this.id).toggleClass('pressed', 100).toggleClass('pressed', 100);
+    playSound(this.id);
 });
 
 // $(".btn").on("click",function() {
@@ -86,3 +62,28 @@ $(".btn").on("click", function() {
 // }
 
 
+function playSound(name){
+    switch(name){
+        case "green":
+            green= new Audio("./sounds/green.mp3");
+            green.play();
+        break;
+        case "red":
+            red = new Audio("./sounds/red.mp3");
+            red.play();
+        break;
+        case "yellow":
+            yellow = new Audio("./sounds/yellow.mp3");
+            yellow.play();
+        break;
+        case "blue":
+            blue = new Audio("./sounds/blue.mp3");
+            blue.play();
+        break;
+        default:
+            wrong = new Audio("./sounds/wrong.mp3");
+            wrong.play();
+        break;
+
+    }
+}
