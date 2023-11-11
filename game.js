@@ -6,23 +6,14 @@ var gamePattern = [];
 var userClickedPattern = [];
 var level = 0;
 
-function nextSquence()
-{
-    level += 1;
-    var randomNumber = Math.floor(Math.random()*3 +1);
-    var randomChosenColour = buttonColours[randomNumber];
-    $("#"+randomChosenColour).toggleClass('pressed', 100).toggleClass('pressed', 100);
-    gamePattern.push(randomChosenColour);
-    playSound(randomChosenColour);
-    $("h1").text("Level "+ level);
-    
-}
 
-if (gamePattern.length <= 0){
+
+// if (gamePattern.length <=0){alert(gamePattern.length);}
+//     else {
+//         alert("check");
+//     }
 $(document).keypress(nextSquence);
-} else {
-alert ("game in progress");
-}
+
 
 
 
@@ -38,7 +29,17 @@ alert ("game in progress");
 // else {
 
 // }
-
+function nextSquence()
+{
+    level += 1;
+    var randomNumber = Math.floor(Math.random()*3 +1);
+    var randomChosenColour = buttonColours[randomNumber];
+    $("#"+randomChosenColour).toggleClass('pressed', 100).toggleClass('pressed', 100);
+    gamePattern.push(randomChosenColour);
+    playSound(randomChosenColour);
+    $("h1").text("Level "+ level);
+    
+}
 $(".btn").on("click", function() {
   $("#"+this.id).toggleClass('pressed', 100).toggleClass('pressed', 100);
     playSound(this.id);
