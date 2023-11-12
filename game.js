@@ -44,8 +44,11 @@ $(".btn").on("click", function() {
   $("#"+this.id).toggleClass('pressed', 100).toggleClass('pressed', 100);
     playSound(this.id);
     userClickedPattern.push(this.id);
+    checkAnswer(userClickedPattern.length);
 });
+function checkAnswer(currentLevel){
 
+}
 
 
 
