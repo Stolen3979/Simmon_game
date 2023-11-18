@@ -45,7 +45,8 @@ if(gamePattern[currentLevel]===userClickedPattern[currentLevel]){
 }else{
     playSound('wrong');
     $('body').toggleClass('game-over',200).toggleClass('game-over',200);
-    $("#level-title").text("Level Game Over, Press Any Key to Restart");
+    $("#level-title").text("Game Over, Press Any Key to Restart");
+    startOver();
     // console.log('wrong');
 }
 }
@@ -59,3 +60,11 @@ function playSound(name){
     var audio = new Audio("sounds/"+ name+".mp3");
     audio.play();
 }
+function startOver() {
+
+    //3. Inside this function, you'll need to reset the values of level, gamePattern and started variables.
+    level = 0;
+    gamePattern = [];
+    started = false;
+  }
+  
